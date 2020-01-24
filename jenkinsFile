@@ -5,7 +5,12 @@ stages{
 stage('Jenkins job'){
  
             steps {
-                sh 'curl -u rig:digitalrig@123 --request GET http://ec2-18-191-16-16.us-east-2.compute.amazonaws.com:8080/rest/api/2/search?jql=project=AVR&fields=key,summary,description&maxResults=1000&startAt=0'
+               sh 'curl --request GET \
+  --url 'http://ec2-18-191-16-16.us-east-2.compute.amazonaws.com:8080/rest/api/2/search?jql=project%3DAVR&fields=key%2Csummary%2Cdescription&maxResults=1000&startAt=0' \
+  --header 'accept: application/json' \
+  --header 'authorization: Basic cmlnOmRpZ2l0YWxyaWdAMTIz' \
+  --header 'cache-control: no-cache' \
+  --header 'postman-token: ab51c289-2187-a551-1d33-e121ad25fb7a''
             }
         }
         
