@@ -10,7 +10,7 @@ stage('Jenkins job'){
   -H 'accept: application/json' \
   -H 'authorization: Basic cmlnOmRpZ2l0YWxyaWdAMTIz' \
   -H 'cache-control: no-cache' \
-  -H 'postman-token: c1a72319-7788-9398-41a5-6901d8ea91fd''
+  -H 'postman-token: c1a72319-7788-9398-41a5-6901d8ea91fd'
  '''
  }
         }
