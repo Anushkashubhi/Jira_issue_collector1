@@ -8,7 +8,7 @@ stages{
 stage('Jenkins job'){
  
             steps {
-               jira_issue_collector()
+               collect-issues()
             }
         }
         
